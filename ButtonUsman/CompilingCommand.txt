@@ -1,0 +1,3 @@
+west build -b nucleo_l432kc ButtonUsman\blinky -d ButtonUsman\build -DDTC_OVERLAY_FILE="button.overlay"
+
+west flash -d ButtonUsman\build
