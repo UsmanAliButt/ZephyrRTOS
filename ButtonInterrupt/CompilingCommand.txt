@@ -1,0 +1,3 @@
+west build -b nucleo_l432kc ButtonInterrupt\blinky -d ButtonInterrupt\build -DDTC_OVERLAY_FILE="button.overlay"
+
+west flash -d ButtonInterrupt\build
