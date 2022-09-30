@@ -1,0 +1,30 @@
+/ {
+	
+	aliases{
+		pwm-led = &led_pwm;
+	};
+		
+	pwmleds: pwmleds {
+		compatible = "pwm-leds";
+		status = "okay";
+	
+		led_pwm: pwm_led_board {
+			pwms = <&pwm2 2 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+		};
+	};	
+	
+};
+
+&usart2 {
+	status = "okay";
+};
+
+&timers2 {
+		status = "okay";
+		
+		pwm2:pwm {
+			status = "okay";
+			pinctrl-0 = <&tim2_ch2_pb3>;
+			pinctrl-names = "default";
+		};
+};

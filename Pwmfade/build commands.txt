@@ -1,0 +1,2 @@
+west build -b nucleo_l432kc Pwmfade -d Pwmfade\build  -DDTC_OVERLAY_FILE="Pwml432kc.overlay"
+west flash -d Pwmfade\build
