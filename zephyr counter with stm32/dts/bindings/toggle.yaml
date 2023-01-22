@@ -1,0 +1,18 @@
+# Author: Usman Ali Butt usa_butt@hotmail.com
+# Dated : 6-October-2022
+
+#Device tree translation is above. We can define it in overlay file.
+description: | 
+        Toggle led driver
+
+compatible: "toggle"
+
+include:    base.yaml
+
+
+properties:
+    switch-gpios:
+        type: phandle-array
+        required: true
+        description: |
+            Led connected with gpio

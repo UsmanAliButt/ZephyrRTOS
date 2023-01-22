@@ -1,0 +1,23 @@
+/ {		
+	drivertoggle:ledtoggle{
+		compatible  	= 		"toggle";
+		status			=		"okay";
+		switch-gpios   	=       <&gpiob 3 GPIO_ACTIVE_HIGH>;
+	};
+	
+};
+
+	&timers6 {
+		status = "okay";
+		count: counter {
+			compatible = "st,stm32-counter";
+			status = "okay";
+			label = "COUNTER";
+		};
+	};
+
+//Our device node "toggle" matches the name in toggle.yaml and toggledriver.c file
+//switch-gpios is phandle passed portb gpio3 and initial status as high.
+//Note: Gpio pin3 is default connected with led on STM32 nucleo-l432kc board.
+//Timer 6 counter is enabled. Functions present in counter_II_stm32_timer.c driver file.
+//Counter direction can also be set. See st,stm32-timers.yaml file.

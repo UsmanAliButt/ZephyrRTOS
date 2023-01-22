@@ -1,0 +1,14 @@
+You can change the hardware before compilation. Instead of "nucleo_l432kc" insert your boards name.
+Compiled files will appear in a folder named build. Explore it, you will find many important things in it. 
+"app" is folder name, containing source and overlay files.
+
+Overlay file is passed to build command as argument using overlay macro.   
+-b = board
+-p = pristine build
+-d build = directory where compiled files will appear 
+
+Build command:
+west build -b nucleo_l432kc app -p -d build  -DDTC_OVERLAY_FILE="boards/toggle.overlay"
+
+Flash command:
+west flash -d build
