@@ -1,4 +1,4 @@
-# Zephyr simple driver "toggleled"
+# Zephyr stm32 microcontroller timer interrupt with NVIC
 Adding a support to zephyr project. Driver development is not well documented and explained in zephyr project. So i decided to create a simple out of tree driver and make is public.
 <br><br>Just one GPIO pin is utilized here. Tested on physical hardware STM32 nucleol432kc board. GPIO pin-3 of module has default led connected to it.
 <br><br>Output of main.c instruction below can be viewed on UART serial terminal. I used PUTTY baudrate is set 115200 and COM port can be verified from Device Manager. 
