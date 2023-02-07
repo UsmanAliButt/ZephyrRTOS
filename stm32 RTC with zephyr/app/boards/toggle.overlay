@@ -1,0 +1,11 @@
+/ {		
+
+	
+};
+
+	&rtc{
+		status = "okay";
+	};
+//clock-frequency property can be added to rtc node. Its defined in \zephyr\dts\bindings\rtc\rtc.yaml file
+//LSI 32KHz clock is supplied to RTC. Its not actived in the device tree, rather counter_ll_stm32_rtc.c file
+//contains LL instructions which activates the LSI.
