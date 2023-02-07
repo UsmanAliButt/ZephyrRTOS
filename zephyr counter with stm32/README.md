@@ -23,5 +23,5 @@ Driver functions are called from main. Output can be seen in the picture below. 
 west init -m https://github.com/UsmanAliButt/ZephyrRTOS.git --mr main ZephyrRTOS
 # Zephyr local repository needs to be updated to dowload zephyr support and dependent modules 
 # See west.yml in project for proper dependencies
-cd zephyr-simple-driver-toggleled
+cd ZephyrRTOS/zephyr counter with stm32
 west update</code>
